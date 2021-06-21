@@ -9,10 +9,20 @@ import UIKit
 
 class QuizViewController: UIViewController {
     
+    @IBOutlet weak var quizNumberLabel: UILabel!
+    @IBOutlet weak var quizTextView: UITextView!
+    @IBOutlet weak var answerButton1: UIButton!
+    @IBOutlet weak var answerButton2: UIButton!
+    @IBOutlet weak var answerButton3: UIButton!
+    @IBOutlet weak var answerButton4: UIButton!
+    
     var csvArry: [String] = []
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        csvArry = loadCSV(fileName: "quiz")
+        print(csvArry)
         
     }
     
