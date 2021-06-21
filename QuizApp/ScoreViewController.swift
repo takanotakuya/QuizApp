@@ -8,10 +8,15 @@
 import UIKit
 
 class ScoreViewController: UIViewController {
+    
+    @IBOutlet weak var scoreLabel: UILabel!
+    
+    var correct = 0
 
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        scoreLabel.text = "\(correct)門正解!"
     }
     
     @IBAction func toTopButtonAction(_ sender: Any) {
